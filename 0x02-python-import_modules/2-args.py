@@ -2,7 +2,7 @@
 import sys
 if __name__ == "__main__":
     x = len(sys.argv) - 1
-    if(x == 1):
+    if x == 1:
         y = "argument"
     else:
         y = "arguments"
