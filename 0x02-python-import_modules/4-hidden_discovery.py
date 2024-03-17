@@ -5,4 +5,4 @@ if __name__ == "__main__":
     strlen = len(names)
     for name in names:
         if(name[:2] != "__"):
-            print("{}".format(name))
+            print(name)
