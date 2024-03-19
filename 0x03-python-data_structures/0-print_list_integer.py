@@ -3,4 +3,4 @@ def print_list_integer(my_list=[]):
     for number in my_list:
         print("{}".format(number))
 if __name__ == "__main__":
-    print_list_integer
+    print_list_integer()
