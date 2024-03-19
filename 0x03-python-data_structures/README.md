@@ -1,0 +1,1 @@
+this is a file containing question i used to train my self on lists and tuples
