@@ -8,8 +8,12 @@ and Value Error if size < 0
 
 class Square:
     """ Defining Square"""
-    def __init__(self, size):
-        """intitialization function for Square"""
+    def __init__(self, size=0):
+        """intitialization function for Square
+
+        Args:
+            size(int): The size of the new square
+        """
         self.size = size
 
     @property
@@ -19,8 +23,11 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """ setter function for size"""
-        if value != int:
+        """ setter function for size
+
+        Args:
+            value(int): value to be inserted"""
+        if type(value) != int:
             raise TypeError("size must be an integer")
         if(value < 0):
             raise ValueError("size must be >= 0")
