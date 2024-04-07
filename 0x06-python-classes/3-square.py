@@ -9,8 +9,11 @@ class Square:
 
         Args:
             size(int): is not an integer
+        Raises:
+            TypeError: If size is not an integer
+            ValueError: If size is less than 0
         """
-        if type(size) != int:
+        if type(size) is not int:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
@@ -18,4 +21,4 @@ class Square:
 
     def area(self):
         """ area of the square"""
-        return(self.__size * self.__size)
+        return(self.__size ** 2)
