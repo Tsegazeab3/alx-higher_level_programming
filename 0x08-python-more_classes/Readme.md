@@ -1,0 +1,1 @@
+This is more exercise on classes and objects
