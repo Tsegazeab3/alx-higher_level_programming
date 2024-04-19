@@ -1,15 +1,14 @@
 #!/usr/bin/python3
-""" adds number
+"""
+
+This module contains function that adds numbers
+func_name: add_integer
 """
 
 
 def add_integer(a, b=98):
-    """ adds a and b
-    Args:
-        a: no1
-        b: no2 default value 98
-    Return:
-        sum of a and b
+    """Args: a: no1  b: no2 default value 98
+    Return:sum of a and b
     """
     if not isinstance(a, (int, float)):
         raise TypeError("a must be an integer")
