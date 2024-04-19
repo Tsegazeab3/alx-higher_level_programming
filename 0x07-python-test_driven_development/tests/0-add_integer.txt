@@ -37,3 +37,11 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+>>> add(0.0000000000000000000000001, 0.00000000000000000000000001)
+0
+>>> add(999999999999999999999999999999999999999, 999999999999999999999999999999999999999)
+Traceback (most recent call last):
+...
+OverflowError
+>>> add(-0.0000000000000000000000001, 0.00000000000000000000000001)
+0
