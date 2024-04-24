@@ -22,7 +22,7 @@ class Square:
         Args:
             Value: value of the size
         """
-        if not isinstance(value,int):
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
