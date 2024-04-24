@@ -4,18 +4,16 @@
 
 class Square:
     """ attributes of a class"""
-    def __init__(self, size=0, position=(0, 0)):
+    def __init__(self, size=0):
         self.__size = size
-        self.__position = position
 
     @property
     def size(self):
-        """ gets size"""
-        return(self.__size)
-    @property
-    def position(self):
-        """gets position"""
-        return(self.__position)
+        """ gets size
+
+        return
+        """
+        return self.__size
 
     @size.setter
     def size(self, value):
@@ -24,33 +22,20 @@ class Square:
         Args:
             Value: value of the size
         """
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.size = value
-    @position.setter
-    def position(self,value):
-        """settes position to value
-
-        Args:
-            Value(tuple): a tuple of 2 positive integers
-        """
-        if not isinstance(value, tuple(int, int)):
-            raise TypeError("position must be a tuple of 2 positive integers")
+        self.__size = value
 
     def area(self):
         """ area of the square"""
-        return(self.size ** 2)
+        return self.__size ** 2
 
     def my_print(self):
-        print("_"*self.position[1])
-
+        """ prints out the square with the caracter #"""
         if self.size == 0:
-            print("")
+            print()
         else:
-            for i in range (0,self.size):
-               for j in range (0, self.size):
-                    print('#',end="")
-               print("")
-
+            for i in range(self.size):
+                print("#" * self.size)
