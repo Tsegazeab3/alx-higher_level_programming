@@ -1,0 +1,49 @@
+>>> mat_div = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix1 = [[1, 2, 3], [4, 5, 6]]
+
+>>> div1 = 2
+
+>>> matrix2 = [[1, 2, 3], [4, 5, "abebe"]]
+
+>>> div2 = 4
+
+>>> matrix3 = matrix1
+
+>>> div3 = 0
+
+>>> matrix4 = matrix1
+
+>>> div4 = "Abebe"
+
+>>> matrix5 = [[0x01,0x02,0x03],[5, 5.2, 3]]
+
+>>> div5 = 3
+
+>>> matrix6 = [[1, 2, 3],[1,2]]
+
+>>> div6 = 4
+
+>>> mat_div(matrix1, div1)
+[[0.5, 1.0, 1.5], [2.0, 2.5, 3.0]]
+
+>>> mat_div(matrix2, div2)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> mat_div(matrix3, div3)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> mat_div(matrix4, div4)
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+
+>>> mat_div(matrix5, div5)
+[[0.33, 0.67, 1.0], [1.67, 1.73, 1.0]]
+>>> mat_div(matrix6 , div6)
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size
