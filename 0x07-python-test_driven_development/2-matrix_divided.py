@@ -9,13 +9,12 @@ def matrix_divided(matrix, div):
     Args:
         matrix: an array of arrays
         div: the divisor
-    expectations:
-        matrix should only contain integers/floats 0
-        matrix should be arectangle 0
-        div must be a number 0
-        div can't be 0 0
-        all should be divided by div, round to 2 decimal places 0
-    Return:
+    Raises:
+        TypeError: If the matrix contains non-numbers.
+        TypeError: If the matrix contains rows of different sizes.
+        TypeError: If div is not an int or float.
+        ZeroDivisionError: If div is 0.
+    Returns:
         new matrix
     """
     string = "matrix must be a matrix (list of lists) of integers/floats"
