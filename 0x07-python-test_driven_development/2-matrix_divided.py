@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import doctest
 """
 This module contains the matrix function
 """
