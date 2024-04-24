@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import doctest
 """
 This module contains the matrix function
 """
@@ -38,5 +37,3 @@ def matrix_divided(matrix, div):
             result_row.append(result)
         result_matrix.append(result_row)
     return(result_matrix)
-if __name__ == "__main__":
-    doctest.testfile("./tests/2-matrix_divided.txt")
