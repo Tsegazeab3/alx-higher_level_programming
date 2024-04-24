@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import doctest
 """
 This module contains the matrix function
 """
@@ -20,6 +21,8 @@ def matrix_divided(matrix, div):
     string = "matrix must be a matrix (list of lists) of integers/floats"
     if div == 0:
         raise ZeroDivisionError("division by zero")
+    if len(matrix) == 0:
+        raise TypeError(string)
     elif not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     x = len(matrix[0])
@@ -35,3 +38,5 @@ def matrix_divided(matrix, div):
             result_row.append(result)
         result_matrix.append(result_row)
     return(result_matrix)
+if __name__ == "__main__":
+    doctest.testfile("./tests/2-matrix_divided.txt")
