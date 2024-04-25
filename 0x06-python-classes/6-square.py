@@ -38,7 +38,11 @@ class Square:
         Args:
             Value(tuple): a tuple of 2 positive integers
         """
-        if not isinstance(value, tuple(int, int)):
+        bool1 = isinstance(value, tuple)
+        bool2 = isinstance((value[0], value[1]), int)
+        bool3 = value[0] >= 0 and value[1] >=0
+        bool3 = len(value) == 2
+        if not (bool1 or bool2 or bool3):
             raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
