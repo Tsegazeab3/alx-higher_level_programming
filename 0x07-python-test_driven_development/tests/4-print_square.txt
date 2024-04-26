@@ -1,0 +1,47 @@
+===============================
+test file for 4-print_square.py
+===============================
+
+=============================
+usage for print_square(size)
+=============================
+::
+
+    >>> func = __import__("4-print_square").print_square
+    >>> func(4)
+    ####
+    ####
+    ####
+    ####
+    >>> func(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    >>> func(0)
+
+
+::
+
+    >>> func(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
+    >>> func(-2.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> func(2.5)
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
+    >>> func("size")
+    Traceback (most recent call last):
+    ...
+    TypeError: size must be an integer
