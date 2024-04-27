@@ -21,7 +21,13 @@ module Creates a class called rectangle
 class Rectangle:
     """ class with a width and height """
     def __init__(self, width=0, height=0):
-        """ initialize width and height with optional value 0"""
+        """
+        initialize width and height with optional value 0
+        Args:
+            width: width of the rectangle
+            height: height of the height
+        calls on setter and getter function
+        """
         self.width = width
         self.height = height
 
@@ -64,3 +70,6 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
