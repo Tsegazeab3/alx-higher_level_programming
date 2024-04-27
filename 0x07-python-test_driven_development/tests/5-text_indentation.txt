@@ -1,0 +1,27 @@
+===================================
+test file for 5-text_indentation.py
+===================================
+
+===================================
+usage of def text_indentation(text)
+===================================
+
+::
+
+>>> indent = __import__("5-text_indentation").text_indentation
+>>> indent("Abebe? besobela. Then: he went to home")
+Abebe?
+<BLANKLINE>
+besobela.
+<BLANKLINE>
+Then:
+<BLANKLINE>
+he went to home
+
+::
+
+>>> indent("")
+>>> indent(1)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
