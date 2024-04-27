@@ -13,6 +13,16 @@ module Creates a class called rectangle
 
 >>> my_rectangle.height = 3
 
+>>> my_rectangle.area()
+30
+>>> my_rectangle.perimeter()
+26
+>>> my_rectangle.height = 0
+
+>>> my_rectangle.width = 20
+
+>>> my_rectangle.perimeter()
+0
 >>> print(my_rectangle.__dict__)
 {'_Rectangle__height': 3, '_Rectangle__width': 10}
 """
@@ -34,7 +44,7 @@ class Rectangle:
     @property
     def width(self):
         """ getter function for width"""
-        return(self.__width)
+        return self.__width
 
     @width.setter
     def width(self, value):
@@ -54,7 +64,7 @@ class Rectangle:
     @property
     def height(self):
         """ height getter function"""
-        return(self.__height)
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -70,6 +80,12 @@ class Rectangle:
         elif value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+    def area(self):
+        return (self.width * self.height)
+    def perimeter(self):
+        if self.width == 0 or self.height == 0:
+            return 0
+        return (2*(self.width + self.height))
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
