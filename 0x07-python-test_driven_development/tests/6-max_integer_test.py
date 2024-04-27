@@ -1,19 +1,16 @@
 #!/usr/bin/python3
+""" Unittest for max_integer([..])
+"""
 import unittest
 max_no = __import__("6-max_integer").max_integer
-"""
-This module is a test file for 6-max_integer
-This module is a test file for 6-max_integer
-This module is a test file for 6-max_integer
-This module is a test file for 6-max_integer
-This module is a test file for 6-max_integer
-"""
+
+
 class Test_max_integer(unittest.TestCase):
     """
     class containing test cases
     inherited from unittest.testcase
     """
-    def cor_output (self):
+    def cor_output(self):
         """
         checks the correct out puts
         """
