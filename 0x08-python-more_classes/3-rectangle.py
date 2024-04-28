@@ -27,6 +27,8 @@ module Creates a class called rectangle
 
 >>> my_rectangle.perimeter()
 0
+>>> print(my_rectangle)
+<BLANKLINE>
 """
 
 
@@ -96,9 +98,11 @@ class Rectangle:
     def __str__(self):
         """ created the default string return of the object"""
         if self.width == 0 or self.height == 0:
-            return ("")
+            return ""
         final_str = []
         for i in range(self.height):
-            width_str = "#" * self.width
+            width_str = "#" * self.width + '\n'
+            if i == self.height - 1:
+                width_str = "#" * self.width
             final_str.append(width_str)
-        return(''.join(final_str))
+        return ''.join(final_str)
