@@ -110,5 +110,6 @@ class Rectangle:
                 width_str = "#" * self.width
             final_str.append(width_str)
         return ''.join(final_str)
+
     def __repr__(self):
-        return("Rectangle({}, {})".format(self.width, self.height))
+        return "Rectangle({}, {})".format(self.width, self.height)
