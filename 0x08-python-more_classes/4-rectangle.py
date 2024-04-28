@@ -112,6 +112,3 @@ class Rectangle:
         return ''.join(final_str)
     def __repr__(self):
         return("Rectangle({}, {})".format(self.width, self.height))
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
