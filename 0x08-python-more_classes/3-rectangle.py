@@ -3,7 +3,7 @@
 module Creates a class called rectangle
 
 
->>> Rectangle = __import__('2-rectangle').Rectangle
+>>> Rectangle = __import__('3-rectangle').Rectangle
 
 >>> my_rectangle = Rectangle(2, 4)
 
@@ -17,14 +17,16 @@ module Creates a class called rectangle
 30
 >>> my_rectangle.perimeter()
 26
+>>> print(my_rectangle)
+##########
+##########
+##########
 >>> my_rectangle.height = 0
 
 >>> my_rectangle.width = 20
 
 >>> my_rectangle.perimeter()
 0
->>> print(my_rectangle.__dict__)
-{'_Rectangle__height': 3, '_Rectangle__width': 10}
 """
 
 
@@ -88,6 +90,12 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return 0
         return 2*(self.width + self.height)
+    def __str__(self):
+        final_str = []
+        for i in range(self.height):
+            width_str = "#" * self.width
+            final_str.append(width_str)
+        return(''.join(final_str))
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
