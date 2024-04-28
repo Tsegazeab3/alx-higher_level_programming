@@ -96,7 +96,7 @@ class Rectangle:
     def __str__(self):
         """ created the default string return of the object"""
         if self.width == 0 or self.height == 0:
-            return 0
+            return ("")
         final_str = []
         for i in range(self.height):
             width_str = "#" * self.width
