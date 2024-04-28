@@ -84,18 +84,21 @@ class Rectangle:
         self.__height = value
 
     def area(self):
+        """ returns the area of the object"""
         return self.width * self.height
 
     def perimeter(self):
+        """ returns the a perimeter of the object"""
         if self.width == 0 or self.height == 0:
             return 0
         return 2*(self.width + self.height)
+
     def __str__(self):
+        """ created the default string return of the object"""
+        if self.width == 0 or self.height == 0:
+            return 0
         final_str = []
         for i in range(self.height):
             width_str = "#" * self.width
             final_str.append(width_str)
         return(''.join(final_str))
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
