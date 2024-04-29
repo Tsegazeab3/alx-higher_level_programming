@@ -112,9 +112,9 @@ class Rectangle:
             return ""
         final_str = []
         for i in range(self.height):
-            width_str = Rectangle.print_symbol * self.width + '\n'
+            width_str = str(self.print_symbol) * self.width + '\n'
             if i == self.height - 1:
-                width_str = Rectangle.print_symbol * self.width
+                width_str = str(self.print_symbol) * self.width
             final_str.append(width_str)
         return ''.join(final_str)
 
