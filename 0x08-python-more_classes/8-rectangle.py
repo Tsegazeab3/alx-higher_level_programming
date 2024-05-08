@@ -2,7 +2,7 @@
 """
 module Creates a class called rectangle
 
->>> Rectangle = __import__('9-rectangle').Rectangle
+>>> Rectangle = __import__('6-rectangle').Rectangle
 
 >>> my_rectangle = Rectangle(2, 4)
 
@@ -32,19 +32,19 @@ module Creates a class called rectangle
 Rectangle(20, 0)
 >>> new_rectangle = eval(repr(my_rectangle))
 
+>>> del(new_rectangle)
+Bye rectangle...
 >>> print(Rectangle.number_of_instances)
 1
->>> rect2 = Rectangle(20, 40)
-
 """
 
 
 class Rectangle:
     """ class with a width and height """
     number_of_instances = 0
-    print_symbol = "#"
+    print_symbol = '#'
 
-    def __init__(self, width=0, height=0):
+    def __init__(self, width=0, height=0, number_of_instances=0):
         """
         initialize width and height with optional value 0
         Args:
@@ -126,22 +126,3 @@ class Rectangle:
         """ shows an instance is deleted"""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-
-    @classmethod
-    def square(cls, size=0):
-        """ this is a class method that creats a square """
-        return (cls(size, size))
-
-    def bigger_or_equal(rect_1, rect_2):
-        """ this is a static method that checks which rect is bigger"""
-        if not isinstance(rect_1, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
-        elif not isinstance(rect_2, Rectangle):
-            raise TypeError("react_2 must be an instance of Rectangle")
-        else:
-            area1 = rect_1.area()
-            area2 = rect_2.area()
-            if area1 >= area2:
-                return rect_1
-            else:
-                return rect_2
