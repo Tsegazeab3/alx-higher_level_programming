@@ -3,10 +3,7 @@
 
 
 class MyList(list):
-    """ inherits from class"""
+    """ class MyList that inherits from list """
     def print_sorted(self):
-        """ prints a sorted list """
+        """ prints the list, but sorted """
         print(sorted(self))
-if __name__ == "__main__":
-    import doctest
-    doctest.testfile("tests/1-my_list.txt",verbose=True)
