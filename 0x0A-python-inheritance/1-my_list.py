@@ -4,6 +4,9 @@
 
 class MyList(list):
     """ inherits from class"""
-    def print_sorted(list):
+    def print_sorted(self):
         """ prints a sorted list """
-        print(sorted(list))
+        print(sorted(self))
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/1-my_list.txt",verbose=True)
