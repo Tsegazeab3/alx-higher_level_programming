@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""this module contains a function that returns True if the object is an"""
+"""
+this module contains a function that returns True if the object is an
+"""
 
 
 def is_kind_of_class(obj, a_class):
